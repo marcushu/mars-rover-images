@@ -1,5 +1,5 @@
-import apiKey from './apiKey';
-//const apiKey = process.env.NASA_API_KEY;
+//import apiKey from './apiKey';
+const apiKey = process.env.NASA_API_KEY;
 // Heroku
 
 
