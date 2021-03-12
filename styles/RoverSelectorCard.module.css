@@ -1,0 +1,15 @@
+.selectortitle {
+    font-size: 38px;
+    color: rgb(161 237 255);;
+}
+
+#main {
+    color: white;
+    background-color: grey;
+}
+
+#main:hover {
+    color: rgb(177, 228, 248);
+    background-color: rgb(95, 95, 95)!important;
+}
+

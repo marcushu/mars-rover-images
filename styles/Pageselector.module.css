@@ -1,0 +1,8 @@
+.pagerow {
+    padding: 10px;
+    background-color: rgb(58, 121, 152);
+    color: rgb(90, 203, 240);
+    border-top: solid;
+    border-width: 1px;
+    border-top-color: rgb(10, 104, 119);
+}

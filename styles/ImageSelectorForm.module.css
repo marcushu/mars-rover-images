@@ -1,0 +1,15 @@
+.formrow {
+    background-color: rgb(58, 121, 152);
+    color: white;
+}
+
+.solinput {
+    border-radius: 5px;
+    border-color: rgb(224, 224, 224); 
+    outline: none; 
+    width: 60px;
+}
+
+.solcount {
+    font-size: 20px;
+}
