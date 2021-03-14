@@ -45,7 +45,7 @@ const ImageSelectorForm = ({ currentRover, photoInfo }: ImageSelectorFormProps) 
 
 
   const getImages = async () => {
-    const imageInformation = await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${currentRover.roverName}/photos?page=${currentPage}&sol=${currentSol}&api_key=${process.env.NASA_API_KEY}`);
+    const imageInformation = await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${currentRover.roverName}/photos?page=${currentPage}&sol=${currentSol}&api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}`);
     setimages(imageInformation.data.photos);
   }
 
