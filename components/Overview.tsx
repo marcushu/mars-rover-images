@@ -33,12 +33,11 @@ const Overview = ({ thisRover }: OverviewProps) => {
           </Button>
         </div>
       </Col>
-      <Col md={6}>
+      <Col md={6} className="d-flex align-items-center justify-content-center">
         <img
+          style={{maxWidth: "100%", maxHeight: "350px"}}
           src={thisRover.imageName}
-          alt="curiosity image"
-          className="img-fluid"
-          height="350px" />
+          alt="curiosity image"/>
       </Col>
     </Row>
   )
