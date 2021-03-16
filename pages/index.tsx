@@ -29,10 +29,6 @@ export default function Home({ curiosityDTA, spiritDTA, opportunityDTA, photoDat
   const [opportunity] = useState(opportunityDTA);
 
 
-  const setRover = (rover: roverData) => {
-    setcurrentRover(rover);
-  }
-
   return (
     <>
       <Head>
@@ -45,7 +41,7 @@ export default function Home({ curiosityDTA, spiritDTA, opportunityDTA, photoDat
         curiosityData={curiosity}
         opportunityData={opportunity}
         spiritData={spirit}
-        setCurrentRover={setRover} />
+        setCurrentRover={setcurrentRover} />
       <Overview
         thisRover={currentRover} />
       <AboutImages />

@@ -4,8 +4,7 @@ import styles from '../styles/ImageSelectorForm.module.css';
 import SelectSol from './SelectSol';
 import NextSol from './NextSol';
 import Images from './Images';
-import { photoData, roverData } from '../js/types';
-import { imageData } from "../js/types";
+import { photoData, roverData, imageData } from '../js/types';
 
 
 interface ImageSelectorFormProps {
@@ -26,7 +25,7 @@ const ImageSelectorForm = ({ currentRover, photoInfo }: ImageSelectorFormProps) 
 
   useEffect(() => {
     const photoInf_current = photoInfo.filter(({ roverName }) => roverName === currentRover.roverName);
-    const numberOfImages = photoInf_current[0].photoInfo.find(s => s.sol == currentSol)?.total_photos;
+    const numberOfImages = photoInf_current[0].photoInfo.find(({sol}) => sol == currentSol)?.total_photos;
 
     if (numberOfImages)
       setNumPagesImages(Math.ceil(numberOfImages / 25));

@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import { imageData } from "../js/types";
 import ImageRow from "./ImageRow";
 import PageSelector from "./PageSelector";

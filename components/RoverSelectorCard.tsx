@@ -15,17 +15,14 @@ const RoverSelectorCard = ({ thisRover, selectedRover, setCurrentRover }: Roverc
   useEffect(() => {
     setisSelected(selectedRover.roverName === thisRover.roverName);
   }, [selectedRover]);
-
-  const handleSelect = () => {
-    setCurrentRover(thisRover);
-  }
+  
 
   return (
     <a href="#"
       className="col-md py-4"
       style={isSelected ? { backgroundColor: "rgb(82,82,82)" } : {}} //conditional rendere if active
       id={styles.main}
-      onClick={handleSelect}>
+      onClick={() => setCurrentRover(thisRover)}>
       <Row className="pb-3">
         <Col className={styles.selectortitle}>
           {thisRover.roverName}
