@@ -14,7 +14,7 @@ interface ImagesProps {
 const Images = ({ photos, setPage, currentPage, totalPages }: ImagesProps) => {
   return (
     <>
-      {!!photos?.length &&
+      {!!photos?.length && totalPages > 1 &&
         < PageSelector
           currentPage={currentPage}
           setPage={setPage}
@@ -25,14 +25,14 @@ const Images = ({ photos, setPage, currentPage, totalPages }: ImagesProps) => {
           <ImageRow photo={photo} key={photo.id} />)
         :
         <Row className="py-4">
-          <Col>
+          <Col className="text-center">
             <span style={{ color: "grey", fontSize: "30px" }}>
               No images available for this sol.
             </span>
           </Col>
         </Row>
       }
-      {!!photos?.length &&
+      {!!photos?.length && totalPages > 1 && 
         < PageSelector
           currentPage={currentPage}
           setPage={setPage}
