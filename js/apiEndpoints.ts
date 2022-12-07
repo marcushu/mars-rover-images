@@ -1,4 +1,5 @@
-const theKey = 'QjjebeezAuxKRjHYTHMe1YG2OEd98haah1gnr5sZ'
+//const theKey = 'QjjebeezAuxKRjHYTHMe1YG2OEd98haah1gnr5sZ'
+const theKey = process.env.NASA_KEY
 
 export const curiosithyManifest = "https://api.nasa.gov/mars-photos/api/v1/manifests/curiosity?api_key=" + theKey;
 

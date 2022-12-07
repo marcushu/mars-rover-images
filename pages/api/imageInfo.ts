@@ -2,6 +2,8 @@ import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next'
 import Cors from 'cors';
 
+const apiKey = process.env.NASA_KEY
+
 const cors = Cors({
     methods: ['POST']
 });
@@ -23,7 +25,7 @@ export default async function imageInfo(req: NextApiRequest, res: NextApiRespons
 
     const { current_rover, _page, _sol } = JSON.parse(req.body);
     
-    const ans = await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${current_rover}/photos?page=${_page}&sol=${_sol}&api_key=QjjebeezAuxKRjHYTHMe1YG2OEd98haah1gnr5sZ`);
+    const ans = await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${current_rover}/photos?page=${_page}&sol=${_sol}&api_key=${apiKey}`);
     
     res.status(200).json(ans.data)
 }
