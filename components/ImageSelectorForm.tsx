@@ -49,7 +49,7 @@ const ImageSelectorForm = ({ currentRover, photoInfo }: ImageSelectorFormProps) 
       _sol: currentSol
     };
 
-    const datas = await fetch('http://localhost:3000/api/imageInfo', {
+    const datas = await fetch('api/imageInfo', {
       method: 'POST',
       body: JSON.stringify(queryInfo)
     });
