@@ -23,7 +23,7 @@ export default async function imageInfo(req: NextApiRequest, res: NextApiRespons
 
     const { current_rover, _page, _sol } = JSON.parse(req.body);
     
-    const ans = await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${current_rover}/photos?page=${_page}&sol=${_sol}&api_key=${process.env.NASA_API_KEY}`);
+    const ans = await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${current_rover}/photos?page=${_page}&sol=${_sol}&api_key=QjjebeezAuxKRjHYTHMe1YG2OEd98haah1gnr5sZ`);
     
     res.status(200).json(ans.data)
 }

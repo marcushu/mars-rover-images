@@ -49,7 +49,7 @@ const ImageSelectorForm = ({ currentRover, photoInfo }: ImageSelectorFormProps) 
       _sol: currentSol
     };
 
-    const datas = await fetch('https://mars-rover-pics.herokuapp.com/api/imageInfo', {
+    const datas = await fetch('http://localhost:3000/api/imageInfo', {
       method: 'POST',
       body: JSON.stringify(queryInfo)
     });
